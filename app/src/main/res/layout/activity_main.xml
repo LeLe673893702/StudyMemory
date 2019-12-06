@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/collection"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="集合"/>
+
+        <Button
+            android:id="@+id/many_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="多层级"/>
+
+        <Button
+            android:id="@+id/inner_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="内部类"/>
+
+        <Button
+            android:id="@+id/new_object_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="频繁创建对象"/>
+
+        <Button
+            android:id="@+id/mat"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Mat"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/weak"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="强弱引用"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="图片问题"
+            android:id="@+id/bt_image"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="哈哈库测试"
+            android:id="@+id/bt_test_haha"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
