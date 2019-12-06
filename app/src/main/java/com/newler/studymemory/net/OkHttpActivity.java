@@ -2,6 +2,7 @@ package com.newler.studymemory.net;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -42,6 +43,6 @@ public class OkHttpActivity extends AppCompatActivity {
                 .get()
                 .build();
         Response response = okHttpClient.newCall(request).execute();
-
+        Log.d("response", response.body().toString());
     }
 }

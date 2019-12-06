@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.newler.studymemory"
     >
 
@@ -21,8 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".net.OkHttpActivity"></activity>
-
         <provider
             android:name="com.argusapm.android.core.storage.ApmProvider"
             android:authorities="${applicationId}.apm.storage"
@@ -49,6 +48,7 @@
         <activity android:name=".MatActivity"></activity>
         <activity android:name=".image.ImageActivity"></activity>
         <activity android:name=".reference.HaHaActivity"></activity>
+        <activity android:name=".net.OkHttpActivity" />
     </application>
 
 </manifest>
