@@ -68,6 +68,13 @@
             android:id="@+id/bt_test_haha"
             />
 
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="okhttp测试"
+            android:id="@+id/bt_test_okhttp"
+            />
+
     </LinearLayout>
 
 </LinearLayout>

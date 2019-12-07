@@ -1,5 +1,6 @@
 package com.newler.studymemory;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import com.newler.studymemory.collection.HashMapActivity;
 import com.newler.studymemory.image.ImageActivity;
 import com.newler.studymemory.inner.InnerActivity;
+import com.newler.studymemory.net.OkHttpActivity;
 import com.newler.studymemory.reference.HaHaActivity;
 import com.newler.studymemory.reference.InstanceActivity;
 import com.newler.studymemory.view.ViewActivity;
@@ -55,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.weak).setOnClickListener(this);
 
         findViewById(R.id.bt_image).setOnClickListener(this);
+
+        findViewById(R.id.bt_test_okhttp).setOnClickListener(this);
     }
 
     @Override
@@ -90,6 +94,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bt_test_haha:
                 startHaHaActivity();
+                break;
+
+            case R.id.bt_test_okhttp:
+                startOkHttpActivity();
                 break;
 
             default:break;
@@ -143,6 +151,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void startHaHaActivity() {
         Intent starter = new Intent(this, HaHaActivity.class);
+        startActivity(starter);
+    }
+
+    public void startOkHttpActivity() {
+        Intent starter = new Intent(this, OkHttpActivity.class);
         startActivity(starter);
     }
 }

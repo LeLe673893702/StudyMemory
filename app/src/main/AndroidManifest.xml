@@ -22,11 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <provider
-            android:name="com.argusapm.android.core.storage.ApmProvider"
-            android:authorities="${applicationId}.apm.storage"
-            android:exported="false"
-            />
 
         <uses-library
             android:name="org.apache.http.legacy"

@@ -26,23 +26,28 @@ public class OkHttpActivity extends AppCompatActivity {
         btStartNet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    startNet();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                startNet();
             }
         });
     }
 
-    public void startNet() throws IOException {
-        OkHttpClient okHttpClient = new OkHttpClient();
-        RequestBody requestBody = RequestBody.create(MediaType.get(""), "");
-        Request request = new Request.Builder()
-                .url("https://www.baidu.com/")
-                .get()
-                .build();
-        Response response = okHttpClient.newCall(request).execute();
-        Log.d("response", response.body().toString());
+    public void startNet() {
+        final OkHttpClient okHttpClient = new OkHttpClient();
+        new Thread() {
+            @Override
+            public void run() {
+                Request request = new Request.Builder()
+                        .url("https://www.baidu.com/")
+                        .get()
+                        .build();
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    Log.d("response", response.body().string());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
     }
 }
